@@ -518,3 +518,8 @@ h2{text-transform:none;font-weight:700;letter-spacing:-.01em}
 .hero4::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22px;background:var(--green);z-index:3}
 .hero4{padding-bottom:64px}
 .hero4-visual{bottom:48px}
+.hero4-visual{right:6px;bottom:40px;width:58%;aspect-ratio:auto}
+.hero4-visual img{height:auto;object-fit:contain;border-radius:0;box-shadow:none;filter:drop-shadow(0 30px 28px rgba(14,36,23,.28));animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{50%{transform:translateY(-10px)}}
+@media (max-width:900px){.hero4-visual{width:100%;right:auto;bottom:auto}}
+@media (prefers-reduced-motion:reduce){.hero4-visual img{animation:none}}

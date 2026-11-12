@@ -37,8 +37,7 @@ export default function Home() {
               </dl>
             </Reveal>
             <Reveal className="hero4-visual">
-              <img src={asset('/assets/photos/installer.jpg')} alt="Installer fixing solar panels on a rooftop" />
-              <div className="float-card"><strong>Solar-ready</strong><span>Charge from the grid, panels or a generator</span></div>
+              <img src={asset('/assets/hero-island.png')} alt="Solar panels on a floating island of grass" />
             </Reveal>
           </div>
         </div>
