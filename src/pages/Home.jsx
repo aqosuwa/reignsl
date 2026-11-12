@@ -21,10 +21,10 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="hero3">
-            <Reveal className="hero3-copy">
-              <h1>Power where<br /><em>it matters</em></h1>
-              <p>REIGN Energy sells and installs rechargeable lithium power systems for homes, shops and small businesses in Sierra Leone, and looks after them once they are installed.</p>
+          <div className="hero4">
+            <Reveal as="h1" className="hero4-h1">Power Where It <em>Matters</em><br /><em>In Sierra Leone</em></Reveal>
+            <Reveal className="hero3-copy hero4-body">
+              <p>REIGN Energy sells and installs rechargeable lithium power systems for homes, shops and small businesses, and looks after them once they are installed.</p>
               <div className="hero3-actions">
                 <Link to="/products" className="btn">See the range</Link>
                 <Link to="/contact" className="btn btn-gold">Get in touch</Link>
@@ -33,11 +33,11 @@ export default function Home() {
               <dl className="hero3-stats">
                 <div><dt>5</dt><dd>power sizes,<br />400 Wh to 15 kWh</dd></div>
                 <div><dt>3</dt><dd>ways to charge:<br />grid, solar, generator</dd></div>
-                <div><dt>Freetown</dt><dd>where we start,<br />then Bo, Kenema, Makeni</dd></div>
+                <div><dt>4</dt><dd>cities: Freetown, Bo,<br />Kenema, Makeni</dd></div>
               </dl>
             </Reveal>
-            <Reveal className="hero3-visual">
-              <div className="blob"><img src={asset('/assets/photos/installer.jpg')} alt="Installer fixing solar panels on a rooftop" /></div>
+            <Reveal className="hero4-visual">
+              <img src={asset('/assets/photos/installer.jpg')} alt="Installer fixing solar panels on a rooftop" />
               <div className="float-card"><strong>Solar-ready</strong><span>Charge from the grid, panels or a generator</span></div>
             </Reveal>
           </div>
