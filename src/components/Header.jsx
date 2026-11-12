@@ -10,11 +10,22 @@ const links = [
   ['/partner', 'Partner'],
 ]
 
+const items = ['Power Mini', 'Power Home', 'Power Plus', 'Power Business', 'Power Industrial', 'Freetown', 'Bo', 'Kenema', 'Makeni', 'Solar-ready', 'Local warranty']
+
 export default function Header() {
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
   return (
     <header className="site-header">
+      <div className="ticker" aria-hidden="true">
+        <div className="ticker-track">
+          {[0, 1].map(k => (
+            <div className="ticker-set" key={k}>
+              {items.map(t => <span key={t}>{t}<i>&#10033;</i></span>)}
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="wrap header-inner">
         <Link to="/" className="brand" aria-label="REIGN home" onClick={close}>
           <img src={asset('/assets/reign-mark.jpg')} alt="" width="44" height="40" />

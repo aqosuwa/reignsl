@@ -611,3 +611,12 @@ section{padding:104px 0}
 .blob{box-shadow:var(--shadow-2)}
 @media (max-width:900px){section{padding:72px 0}.hero2{margin-top:84px}}
 .hero3-sm .blob{border-radius:var(--r-lg);aspect-ratio:4/3;max-width:600px}
+.hero3-sm .blob img{object-position:center 30%}
+.faq-photo img{object-position:30% center}
+/* ticker now sits at the very top, above the menu bar */
+.site-header .ticker{padding:9px 0;font-size:.78rem}
+.hero2{margin-top:118px}
+.hero2-card{border-radius:var(--r-lg) var(--r-lg) 0 0}
+@media (max-width:900px){.hero2{margin-top:108px}}
+.contact{margin-top:118px;padding-top:72px}
+.page-hero{padding-top:150px}

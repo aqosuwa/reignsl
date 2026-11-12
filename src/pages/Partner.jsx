@@ -6,7 +6,7 @@ import { PageHero } from '../components/Sections.jsx'
 
 const cards = [
   ['Homes & businesses', 'Tell us what you need to keep running. We will recommend the right size and let you know when we launch.', 'Customer', 'Register interest →', asset('/assets/photos/shop-owner.jpg'), 'Shop owner at his counter'],
-  ['Dealers & installers', 'Electrical shops, solar installers and technicians in Freetown, Bo, Kenema and Makeni: join our network. We supply the systems and back you with warranty support.', 'Dealer or installer', 'Join the network →', asset('/assets/photos/installer.jpg'), 'Installer fixing solar panels'],
+  ['Dealers & installers', 'Electrical shops, solar installers and technicians in Freetown, Bo, Kenema and Makeni: join our network. We supply the systems and back you with warranty support.', 'Dealer or installer', 'Join the network →', asset('/assets/photos/panel-lift.jpg'), 'Installer lifting a solar panel'],
   ['Investors & partners', 'We are building in stages and only expanding once each stage works. Talk to us about partnership and investment.', 'Investor or partner', 'Start a conversation →', asset('/assets/photos/panel-closeup.jpg'), 'Solar panel being fitted on a roof'],
 ]
 

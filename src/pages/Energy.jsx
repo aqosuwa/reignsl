@@ -22,7 +22,7 @@ export default function Energy() {
   usePageMeta('REIGN Energy | Power where it matters', 'REIGN Energy: affordable, solar-ready lithium power systems for homes, shops and businesses in Sierra Leone.')
   return (
     <>
-      <PageHero image={asset('/assets/photos/installer.jpg')} alt="Installer fixing solar panels on a rooftop" eyebrow="REIGN Energy" title="Power where" accent="it matters" lead="Rechargeable, solar-ready lithium power for homes, shops and businesses. Powering Lives. Empowering Nations." />
+      <PageHero image={asset('/assets/photos/panel-lift.jpg')} alt="Installer lifting a solar panel on a rooftop" eyebrow="REIGN Energy" title="Power where" accent="it matters" lead="Rechargeable, solar-ready lithium power for homes, shops and businesses. Powering Lives. Empowering Nations." />
 
       <section className="energy">
         <div className="wrap">

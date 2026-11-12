@@ -10,17 +10,6 @@ export default function Home() {
     <>
       <section className="hero2">
         <div className="hero2-card">
-          <div className="ticker" aria-hidden="true">
-            <div className="ticker-track">
-              {[0, 1].map(k => (
-                <div className="ticker-set" key={k}>
-                  {['Power Mini', 'Power Home', 'Power Plus', 'Power Business', 'Power Industrial', 'Freetown', 'Bo', 'Kenema', 'Makeni', 'Solar-ready', 'Local warranty'].map(t => (
-                    <span key={t}>{t}<i>&#10033;</i></span>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
           <div className="hero4">
             <Reveal as="h1" className="hero4-h1">Power Where It <em>Matters</em><br /><em>In Sierra Leone</em></Reveal>
             <Reveal className="hero3-copy hero4-body">
@@ -120,7 +109,7 @@ export default function Home() {
               <Link to="/contact" className="btn btn-small">Talk to us</Link>
             </div>
             <Link to="/energy" className="pc pc-wide">
-              <img src={asset('/assets/photos/installer.jpg')} alt="Installer fixing solar panels on a rooftop" />
+              <img src={asset('/assets/photos/installer-kneeling.jpg')} alt="Installer tightening a solar panel clamp on a rooftop" />
               <div><b>Installed properly</b><span>How we survey, install and hand over a system.</span></div>
             </Link>
           </Reveal>
@@ -136,7 +125,7 @@ export default function Home() {
       <section className="faq">
         <div className="wrap faq-grid">
           <Reveal className="faq-photo">
-            <img src={asset('/assets/photos/shop-owner.jpg')} alt="A shop owner in Sierra Leone" />
+            <img src={asset('/assets/photos/freetown-hillside.jpg')} alt="Freetown homes on a hillside at dusk" />
           </Reveal>
           <Reveal>
             <h2>Questions <em>people ask</em></h2>
