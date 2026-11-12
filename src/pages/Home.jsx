@@ -26,7 +26,7 @@ export default function Home() {
               </dl>
             </Reveal>
             <Reveal className="hero4-visual">
-              <img src={asset('/assets/hero-island.png')} alt="Solar panels on a floating island of grass" />
+              <img src={asset('/assets/hero-island.svg')} alt="Floating island with solar panels, wind turbines, trees and homes" />
             </Reveal>
           </div>
         </div>
