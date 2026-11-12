@@ -48,6 +48,29 @@ export default function Energy() {
         </div>
       </section>
 
+      <section className="energy-more">
+        <div className="wrap">
+          <Reveal><h2 className="h2x">Why <em>lithium</em> beats a generator</h2></Reveal>
+          <Reveal className="cmp">
+            <div className="cmp-row cmp-head"><span></span><span>REIGN lithium system</span><span>Petrol / diesel generator</span></div>
+            <div className="cmp-row"><span>Running cost</span><span>No fuel once installed</span><span>Fuel bought every week</span></div>
+            <div className="cmp-row"><span>Noise</span><span>Silent</span><span>Loud, disturbs neighbours</span></div>
+            <div className="cmp-row"><span>Maintenance</span><span>Almost none</span><span>Oil, filters, servicing</span></div>
+            <div className="cmp-row"><span>Switch-over</span><span>Automatic, no gap</span><span>Start it by hand</span></div>
+            <div className="cmp-row"><span>Safety indoors</span><span>No fumes</span><span>Fumes, must run outside</span></div>
+            <div className="cmp-row"><span>Battery life</span><span>Thousands of charge cycles</span><span>Engine wears with hours</span></div>
+          </Reveal>
+
+          <Reveal><h2 className="h2x" style={{marginTop:72}}>Who it is <em>for</em></h2></Reveal>
+          <Reveal className="uses">
+            <div className="use"><b>Homes</b><p>Keep lights, fans, TV, phones and the fridge on through the evening, with no fuel run.</p></div>
+            <div className="use"><b>Shops and kiosks</b><p>Keep lights, card readers and freezers running so you do not lose sales or stock.</p></div>
+            <div className="use"><b>Offices and cafés</b><p>Laptops, routers, coffee machines and tills stay up through every cut.</p></div>
+            <div className="use"><b>Clinics and workshops</b><p>Steady power for small equipment, with room to grow as you add more.</p></div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="svc-list how2">
         <div className="wrap svc-list-grid">
           <Reveal>
