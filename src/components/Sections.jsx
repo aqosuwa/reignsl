@@ -43,10 +43,10 @@ export function SectionHead({ eyebrow, title, sub, light, gold }) {
 }
 
 const pillars = [
-  ['Innovation', 'Proven technology, applied thoughtfully to the real problems people in our markets face every day.'],
-  ['Economic Growth', 'Reliable power keeps shops open, work moving and local technical jobs growing.'],
-  ['Strategic Partnership', 'We work with trusted manufacturers, dealers, installers and financing partners to deliver well and stand behind it.'],
-  ['Global Excellence', 'International standards of quality and safety, delivered with dependable local service.'],
+  ['Innovation', 'We use proven technology to solve the problems our customers actually have, starting with power cuts.'],
+  ['Economic growth', 'Reliable power keeps shops open and people working, and it creates local technical jobs.'],
+  ['Strong partnerships', 'We work with trusted manufacturers, dealers, installers and finance partners, and we stand behind what we sell.'],
+  ['High standards', 'International quality and safety standards, with service you can reach locally.'],
 ]
 
 export function Pillars({ eyebrow = 'Who we are', title = 'Built on four commitments' }) {
@@ -74,11 +74,11 @@ export function VisionMission() {
       <div className="wrap vm-grid">
         <Reveal>
           <p className="eyebrow gold">Vision</p>
-          <p className="vm-text">To become a leading African energy solutions company, empowering households, businesses and industries through affordable, reliable and innovative power technologies, while driving economic development, job creation and sustainable growth across West Africa.</p>
+          <p className="vm-text">To be a leading African energy company: affordable, reliable power for homes, businesses and industry across West Africa, and the jobs and growth that come with it.</p>
         </Reveal>
         <Reveal>
           <p className="eyebrow gold">Mission</p>
-          <p className="vm-text">To bridge Africa&rsquo;s electricity reliability gap through accessible lithium battery storage, solar-integrated technologies, strategic international partnerships and dependable local after-sales service.</p>
+          <p className="vm-text">To close the electricity reliability gap with lithium battery storage, solar-ready systems and dependable local after-sales service, working with strong international partners.</p>
         </Reveal>
       </div>
     </section>
@@ -98,7 +98,7 @@ export function Roadmap() {
         <SectionHead
           eyebrow="Where we’re heading"
           title="Sierra Leone first. West Africa next."
-          sub="We expand only when our service and customer results are proven. Each new country brings its own import, standards and service requirements."
+          sub="We only move to a new country when our service and customer results at home are proven. Every country has its own import rules, standards and service needs."
         />
         <ol className="timeline">
           {phases.map(([when, title, text]) => (

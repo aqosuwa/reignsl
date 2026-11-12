@@ -7,8 +7,7 @@ export default function About() {
   usePageMeta('About | REIGN', 'About REIGN: our commitments, vision, mission and roadmap from Sierra Leone to West Africa.')
   return (
     <>
-      <PageHero eyebrow="About REIGN" title="Who we are" lead="A company built on innovation, economic growth, strategic partnership and global excellence." />
-      <section className="photo-band"><Reveal className="band-inner"><img src={asset('/assets/photos/shop-owner.jpg')} alt="Shop owner at his counter" /></Reveal></section>
+      <PageHero image={asset('/assets/photos/shop-owner.jpg')} alt="Shop owner at his counter" eyebrow="About REIGN" title="Built to keep" accent="the power on" lead="REIGN is a new company starting in Sierra Leone. Our first division, REIGN Energy, sells and installs lithium batteries so homes and shops can keep working when the grid goes down." />
       <Pillars eyebrow="Our commitments" />
       <VisionMission />
       <Roadmap />

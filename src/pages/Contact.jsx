@@ -32,9 +32,9 @@ export default function Contact() {
         <Reveal>
           <p className="eyebrow gold">Contact</p>
           <h2>Let&rsquo;s talk</h2>
-          <p>Questions, partnership ideas or interest in REIGN Energy? Send us a message and we&rsquo;ll get back to you.</p>
+          <p>Questions about the range, want to become a dealer or installer, or interested in investing? Send us a message and tell us which fits. We will reply by email.</p>
           <p className="contact-line"><a href="mailto:info@reignsl.com">info@reignsl.com</a></p>
-          <p className="contact-line dim">Sierra Leone</p>
+          <p className="contact-line dim">Starting in Freetown, Sierra Leone</p>
         </Reveal>
         <Reveal as="form" className="form" onSubmit={submit} noValidate>
           <label>Name<input type="text" value={form.name} onChange={set('name')} autoComplete="name" required /></label>
