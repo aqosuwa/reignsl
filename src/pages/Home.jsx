@@ -10,31 +10,41 @@ export default function Home() {
     <>
       <section className="hero2">
         <div className="hero2-card">
-          <div className="hero2-top">
-            <Reveal as="h1" className="hero2-h1">
-              <span>People.</span>
-              <Link to="/contact" className="h1-pill">Work with us <i>&rarr;</i></Link>
-              <span>Progress.</span>
-              <em>Prosperity.</em>
-            </Reveal>
-            <Reveal className="hero2-side">
-              <p className="eyebrow">Sierra Leone first &bull; West Africa next</p>
-              <p>REIGN Energy sells and installs rechargeable lithium power systems for homes, shops and small businesses in Sierra Leone, and looks after them once they are installed.</p>
-              <Link to="/energy" className="side-card"><span>Explore<br />REIGN Energy</span><i>&#8599;</i></Link>
-            </Reveal>
+          <div className="ticker" aria-hidden="true">
+            <div className="ticker-track">
+              {[0, 1].map(k => (
+                <div className="ticker-set" key={k}>
+                  {['Power Mini', 'Power Home', 'Power Plus', 'Power Business', 'Power Industrial', 'Freetown', 'Bo', 'Kenema', 'Makeni', 'Solar-ready', 'Local warranty'].map(t => (
+                    <span key={t}>{t}<i>&#10033;</i></span>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="hero-photo">
-            <img src={asset('/assets/photos/installer.jpg')} alt="Installer fixing solar panels on a rooftop" />
+          <div className="hero3">
+            <Reveal className="hero3-copy">
+              <h1>Power where<br /><em>it matters</em></h1>
+              <p>REIGN Energy sells and installs rechargeable lithium power systems for homes, shops and small businesses in Sierra Leone, and looks after them once they are installed.</p>
+              <div className="hero3-actions">
+                <Link to="/products" className="btn">See the range</Link>
+                <Link to="/contact" className="btn btn-gold">Get in touch</Link>
+                <Link to="/energy" className="circle-btn" aria-label="How it works">&#8599;</Link>
+              </div>
+              <dl className="hero3-stats">
+                <div><dt>5</dt><dd>power sizes,<br />400 Wh to 15 kWh</dd></div>
+                <div><dt>3</dt><dd>ways to charge:<br />grid, solar, generator</dd></div>
+                <div><dt>Freetown</dt><dd>where we start,<br />then Bo, Kenema, Makeni</dd></div>
+              </dl>
+            </Reveal>
+            <Reveal className="hero3-visual">
+              <div className="blob"><img src={asset('/assets/photos/installer.jpg')} alt="Installer fixing solar panels on a rooftop" /></div>
+              <div className="float-card"><strong>Solar-ready</strong><span>Charge from the grid, panels or a generator</span></div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       <section className="statsband">
-        <Reveal className="wrap statsband-grid">
-          {[['5', 'power sizes', '400 Wh to 15 kWh'], ['3', 'ways to charge', 'grid, solar, generator'], ['Freetown', 'where we start', 'then Bo, Kenema and Makeni'], ['2 years', 'Sierra Leone pilot', 'before we look at other countries']].map(([n, l, d]) => (
-            <div className="sb" key={l}><strong>{n}</strong><span>{l}</span><small>{d}</small></div>
-          ))}
-        </Reveal>
         <Reveal className="wrap sb-head">
           <h2>Power you<br />can rely on</h2>
           <p>When the grid drops, shops lose sales and homes lose their evenings. We supply battery systems that keep the essentials running, and the people to install and fix them.</p>
