@@ -407,3 +407,69 @@ h2{text-transform:none;font-weight:700;letter-spacing:-.01em}
   .float-card{left:0}
   .statsband>.sb-head{grid-template-columns:1fr;padding:40px 24px;border-radius:28px}
 }
+
+/* ---- Home below hero (Suntrix-style sections) ---- */
+.intro,.svc-list,.purpose,.faq{padding:72px 0 0}
+.intro h2,.svc-list h2,.purpose h2,.faq h2{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:800;letter-spacing:-.025em;line-height:1.05;text-transform:none;margin:0 0 24px}
+.intro h2 em,.svc-list h2 em,.purpose h2 em,.faq h2 em{font-style:normal;color:var(--gold)}
+.intro-head{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:end;margin-bottom:36px}
+.intro-head p{margin:0 0 14px;max-width:38ch}
+.textlink{font-weight:700;color:var(--green);border-bottom:2px solid var(--gold);padding-bottom:2px}
+.intro-grid{display:grid;grid-template-columns:1.1fr 1fr .8fr;gap:18px}
+.ic{border-radius:32px;overflow:hidden;min-height:340px}
+.ic-dark{background:var(--green);color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;gap:14px}
+.ic-dark h3{font-size:1.7rem;line-height:1.1;margin:0;color:#fff}
+.ic-dark p{margin:0;opacity:.8}
+.ic-dark .btn{align-self:flex-start}
+.ic-tag{align-self:flex-start;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:5px 12px;font-size:.8rem;margin-bottom:auto}
+.ic-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.ic-stat{background:var(--gold);color:var(--green);padding:32px;display:flex;flex-direction:column;justify-content:flex-end}
+.ic-stat strong{font-size:6rem;line-height:.9;font-weight:800;letter-spacing:-.04em}
+.ic-stat span{font-weight:700;margin:6px 0 12px}
+.ic-stat p{margin:0;font-size:.95rem}
+
+.svc-list-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid rgba(14,36,23,.18)}
+.rows li{border-bottom:1px solid rgba(14,36,23,.18)}
+.rows a{display:grid;grid-template-columns:48px 1fr 40px;gap:12px;align-items:center;padding:20px 0;transition:padding .2s}
+.rows a:hover{padding-left:10px}
+.row-n{color:var(--gold-3);font-weight:700}
+.row-t b{display:block;font-size:1.2rem}
+.row-t small{display:block;opacity:.7;margin-top:4px;font-size:.95rem}
+.row-a{width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center}
+.svc-list-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:32px;display:block;position:sticky;top:96px}
+
+.purpose-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:8px}
+.purpose-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:12px}
+.pc{position:relative;border-radius:28px;overflow:hidden;display:block;min-height:300px;background:var(--green)}
+.pc img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;display:block;transition:transform .5s}
+.pc:hover img{transform:scale(1.04)}
+.pc div{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(248,244,235,.94);border-radius:20px;padding:14px 16px}
+.pc b{display:block}
+.pc span{display:block;font-size:.9rem;opacity:.75;margin-top:2px}
+.pc-text{display:flex;flex-direction:column;justify-content:center;gap:16px;padding:8px 12px}
+.pc-text p{margin:0;font-size:1.1rem}
+.pc-text .btn{align-self:flex-start}
+.pc-wide{grid-column:1 / -1;min-height:260px}
+.numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(14,36,23,.18)}
+.numbers strong{display:block;font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;line-height:1}
+.numbers span{display:block;margin-top:8px;font-size:.9rem;opacity:.7}
+
+.faq{padding-bottom:72px}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.faq-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:32px;display:block}
+.faq details{border-bottom:1px solid rgba(14,36,23,.18);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";color:var(--gold-3);font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{margin:10px 0 0;opacity:.8;max-width:56ch}
+
+@media (max-width:900px){
+  .intro-head,.svc-list-grid,.faq-grid{grid-template-columns:1fr;gap:28px}
+  .intro-grid,.purpose-grid{grid-template-columns:1fr}
+  .ic{min-height:280px}
+  .svc-list-photo img,.faq-photo img{position:static;aspect-ratio:4/3}
+  .numbers{grid-template-columns:1fr 1fr}
+  .purpose-head{flex-direction:column;align-items:flex-start}
+}
+.rows a,.rows a:hover{text-decoration:none;color:inherit}
