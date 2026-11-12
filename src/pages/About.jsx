@@ -19,13 +19,6 @@ export default function About() {
   usePageMeta('About | REIGN', 'About REIGN: our commitments, vision, mission and roadmap from Sierra Leone to West Africa.')
   return (
     <>
-      <section className="ab-band">
-        <div className="wrap">
-          <h1>About REIGN</h1>
-          <p className="crumbs"><Link to="/">Home</Link> / <b>About Us</b></p>
-        </div>
-      </section>
-
       <section className="ab-intro">
         <div className="wrap ab-intro-grid">
           <Reveal className="ab-collage">
