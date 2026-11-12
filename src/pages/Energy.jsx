@@ -26,13 +26,34 @@ export default function Energy() {
 
       <section className="energy">
         <div className="wrap">
-          <Reveal><h2 className="h2x">Reliable power is still out of <em>reach</em> for most</h2></Reveal>
-          <Reveal className="intro-grid stat-trio">
-            <div className="ic ic-stat"><strong>~30%</strong><span>of Sierra Leone has access to electricity</span></div>
-            <div className="ic ic-stat dark"><strong>&lt;5%</strong><span>access in rural areas</span></div>
-            <div className="ic ic-stat light"><strong>3</strong><span>ways to charge: grid, solar, approved generator</span></div>
-          </Reveal>
-          <Reveal as="p" className="source">Access figures: U.S. International Trade Administration, Sierra Leone Energy Infrastructure, January 2026.</Reveal>
+          <div className="stat-sec">
+            <Reveal className="stat-left">
+              <p className="eyebrow">The gap</p>
+              <h2 className="h2x">Reliable power is still out of <em>reach</em> for most</h2>
+              <p className="stat-lead">Most people in Sierra Leone live without a dependable electricity supply, and in rural areas almost no one has it. Batteries bridge that gap, one home or shop at a time.</p>
+              <p className="source">Access figures: U.S. International Trade Administration, Sierra Leone Energy Infrastructure, January 2026.</p>
+            </Reveal>
+            <Reveal className="stat-right">
+              <div className="sc sc-main">
+                <span className="sc-label">Access to electricity</span>
+                <strong>~30%</strong>
+                <div className="bar"><i style={{width:'30%'}} /></div>
+                <small>of Sierra Leone has access, so about 7 in 10 people do not</small>
+              </div>
+              <div className="sc sc-dark">
+                <span className="sc-label">Rural areas</span>
+                <strong>&lt;5%</strong>
+                <div className="bar"><i style={{width:'5%'}} /></div>
+                <small>have access</small>
+              </div>
+              <div className="sc sc-light">
+                <span className="sc-label">Our answer</span>
+                <strong>3</strong>
+                <ul className="ways"><li>Grid</li><li>Solar</li><li>Generator</li></ul>
+                <small>ways to charge a REIGN system</small>
+              </div>
+            </Reveal>
+          </div>
 
           <div className="two-col">
             <Reveal>

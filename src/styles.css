@@ -725,3 +725,26 @@ body{font-size:17px}
 .hero4-body .hero3-actions .circle-btn:hover{border-color:var(--brown);color:var(--brown)}
 .ab-partner li::before{color:var(--brown)}
 .ab-intro{padding-top:56px;margin-top:118px}
+
+/* Energy stat section */
+.stat-sec{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-bottom:56px}
+.stat-left .h2x{max-width:none;margin-bottom:20px}
+.stat-lead{font-size:1.1rem;color:#4b5a51;line-height:1.75;margin:0 0 20px;max-width:46ch}
+.stat-left .source{margin:0}
+.stat-right{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sc{border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column;gap:10px;min-height:230px}
+.sc strong{font-size:4.2rem;line-height:1;font-weight:800;letter-spacing:-.03em}
+.sc small{font-size:.98rem;line-height:1.4;margin-top:auto}
+.sc-label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.sc-main{grid-column:1/-1;background:linear-gradient(135deg,#4cc47f,#1f9d57);color:var(--green);min-height:250px}
+.sc-main strong{font-size:6rem}
+.sc-dark{background:linear-gradient(160deg,#143222,#0b1c12);color:#fff}
+.sc-dark strong{color:#4cc47f}
+.sc-light{background:var(--cream-2);color:var(--green);border:1px solid var(--hair)}
+.bar{height:10px;border-radius:5px;background:rgba(14,36,23,.18);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:5px;background:var(--green)}
+.sc-dark .bar{background:rgba(255,255,255,.16)}.sc-dark .bar i{background:#4cc47f}
+.ways{list-style:none;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap}
+.ways li{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:6px 12px;font-weight:700;font-size:.9rem}
+@media (max-width:900px){.stat-sec{grid-template-columns:1fr;gap:30px}.sc-main strong{font-size:4.6rem}}
+@media (max-width:520px){.stat-right{grid-template-columns:1fr}}
