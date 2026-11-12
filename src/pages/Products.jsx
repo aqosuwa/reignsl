@@ -74,9 +74,11 @@ export default function Products() {
                   {p.featured ? <span className="pr-flag">Most popular</span> : p.order ? <span className="pr-flag alt">Made to order</span> : <span className="pr-flag alt">Ready to install</span>}
                 </header>
                 <div className="pr-stage">
-                  <div className="unit" style={{ '--h': `${70 + p.fill * 0.9}px`, '--w': `${88 + p.fill * 0.7}px` }}>
-                    <i className="led" style={{ '--on': Math.max(1, Math.round(p.fill / 20)) }} />
-                    <b className="unit-logo">R</b>
+                  <div className="unit" style={{ '--h': `${96 + p.fill * 0.85}px`, '--w': `${70 + p.fill * 0.55}px` }}>
+                    <span className="u-handle" />
+                    <span className="u-screen"><i style={{ width: `${Math.max(18, p.fill)}%` }} /></span>
+                    <b className="u-name">REIGN</b>
+                    <span className="u-ports"><i /><i /><i /></span>
                   </div>
                 </div>
                 <h3>{p.name}</h3>
