@@ -894,3 +894,13 @@ body{font-size:17px}
 .nav-bar .glider{top:4px;bottom:4px;border-radius:9px}
 .nav-bar a:not(.btn){padding:8px 15px;border-radius:9px;font-size:.88rem}
 .header-inner{height:66px}
+
+/* navbar: no green bar, plain with sliding dark tab */
+.nav-bar{background:none;box-shadow:none;padding:4px}
+.nav-bar a:not(.btn){color:var(--green)}
+@media (max-width:900px){.nav-bar{background:none;padding:0}}
+.nav-bar a.active:not(.btn){color:var(--green)!important}
+.nav-bar a.under:not(.btn),.nav-bar a.active.under:not(.btn),.nav-bar a:not(.btn):not(.active):hover.under{color:#fff!important}
+.nav-bar a:not(.btn):not(.active):hover{color:var(--green)!important}
+.nav-bar a.under:not(.btn):hover{color:#fff!important}
+@media (max-width:900px){.nav-bar a.active:not(.btn){color:#fff!important}}

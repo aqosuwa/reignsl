@@ -21,6 +21,7 @@ export default function Header() {
   const moveTo = useCallback(el => {
     const g = glider.current
     if (!g) return
+    bar.current?.querySelectorAll('a').forEach(a => a.classList.toggle('under', a === el))
     if (!el) { g.style.opacity = 0; return }
     g.style.opacity = 1
     g.style.width = el.offsetWidth + 'px'
