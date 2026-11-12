@@ -1,7 +1,26 @@
 import { Link } from 'react-router-dom'
 import Reveal from './Reveal.jsx'
 
-export function PageHero({ eyebrow, title, lead }) {
+export function PageHero({ eyebrow, title, accent, lead, image, alt, actions }) {
+  if (image) {
+    return (
+      <section className="hero2">
+        <div className="hero2-card">
+          <div className="hero3 hero3-sm">
+            <Reveal className="hero3-copy">
+              <p className="eyebrow">{eyebrow}</p>
+              <h1>{title}{accent && <><br /><em>{accent}</em></>}</h1>
+              <p>{lead}</p>
+              {actions}
+            </Reveal>
+            <Reveal className="hero3-visual">
+              <div className="blob"><img src={image} alt={alt} /></div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+    )
+  }
   return (
     <section className="page-hero">
       <Reveal className="wrap">

@@ -50,14 +50,14 @@ export default function Products() {
   usePageMeta('The REIGN Power range', 'Five REIGN Power sizes from 400 Wh to 15 kWh, plus a runtime estimator.')
   return (
     <>
-      <PageHero eyebrow="The range" title="REIGN Power" lead="Five sizes, from a phone charger to a workshop. We lead with Mini, Home and Plus; Business and Industrial are supplied to order after a site assessment." />
-      <section className="photo-band"><Reveal className="band-inner"><img src={asset('/assets/photos/panel-closeup.jpg')} alt="Solar panel being fitted on a roof" /></Reveal></section>
+      <PageHero image={asset('/assets/photos/panel-closeup.jpg')} alt="Solar panel being fitted on a roof" eyebrow="The range" title="REIGN" accent="Power" lead="Five sizes, from a phone charger to a workshop. We lead with Mini, Home and Plus; Business and Industrial are supplied to order after a site assessment." />
       <section className="range">
         <div className="wrap">
           <div className="cards">
             {range.map(p => (
               <Reveal as="article" className={`card ${p.featured ? 'featured' : ''}`} key={p.name}>
                 <div className="batt" style={{ '--fill': `${p.fill}%` }} />
+                <span className="card-n">{String(range.indexOf(p) + 1).padStart(2, '0')}</span>
                 <h3>{p.name}</h3>
                 <p className="spec"><b>{fmt(p.wh)} Wh</b> &middot; {fmt(p.w)} W</p>
                 <p>{p.use}</p>

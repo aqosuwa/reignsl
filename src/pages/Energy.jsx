@@ -22,19 +22,15 @@ export default function Energy() {
   usePageMeta('REIGN Energy | Power where it matters', 'REIGN Energy: affordable, solar-ready lithium power systems for homes, shops and businesses in Sierra Leone.')
   return (
     <>
-      <PageHero eyebrow="REIGN Energy" title="Power where it matters" lead="Rechargeable, solar-ready lithium power for homes, shops and businesses. Powering Lives. Empowering Nations." />
-
-      <section className="photo-band">
-        <Reveal className="band-inner"><img src={asset('/assets/photos/installer.jpg')} alt="Installer fixing solar panels on a rooftop" /></Reveal>
-      </section>
+      <PageHero image={asset('/assets/photos/installer.jpg')} alt="Installer fixing solar panels on a rooftop" eyebrow="REIGN Energy" title="Power where" accent="it matters" lead="Rechargeable, solar-ready lithium power for homes, shops and businesses. Powering Lives. Empowering Nations." />
 
       <section className="energy">
         <div className="wrap">
-          <SectionHead eyebrow="The need" title="Reliable power is still out of reach for most" />
-          <Reveal className="stats">
-            <div className="stat"><strong>~30%</strong><span>of Sierra Leone has access to electricity</span></div>
-            <div className="stat"><strong>&lt;5%</strong><span>access in rural areas</span></div>
-            <div className="stat"><strong>3</strong><span>ways to charge: grid, solar, approved generator</span></div>
+          <Reveal><h2 className="h2x">Reliable power is still out of <em>reach</em> for most</h2></Reveal>
+          <Reveal className="intro-grid stat-trio">
+            <div className="ic ic-stat"><strong>~30%</strong><span>of Sierra Leone has access to electricity</span></div>
+            <div className="ic ic-stat dark"><strong>&lt;5%</strong><span>access in rural areas</span></div>
+            <div className="ic ic-stat light"><strong>3</strong><span>ways to charge: grid, solar, approved generator</span></div>
           </Reveal>
           <Reveal as="p" className="source">Access figures: U.S. International Trade Administration, Sierra Leone Energy Infrastructure, January 2026.</Reveal>
 
@@ -52,14 +48,26 @@ export default function Energy() {
         </div>
       </section>
 
-      <section className="how">
+      <section className="svc-list how2">
+        <div className="wrap svc-list-grid">
+          <Reveal>
+            <h2>How we <em>work</em></h2>
+            <ul className="rows">
+              {steps.map(([t, d], i) => (
+                <li key={t}>
+                  <div className="ri">
+                    <span className="row-n">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="row-t"><b>{t}</b><small>{d}</small></span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal className="svc-list-photo">
+            <img src={asset('/assets/photos/roof-technician.jpg')} alt="Technician connecting solar panel cables on a rooftop" />
+          </Reveal>
+        </div>
         <div className="wrap">
-          <SectionHead light gold eyebrow="How we work" title="Quality you can rely on, service you can reach" />
-          <div className="steps">
-            {steps.map(([t, d], i) => (
-              <Reveal className="step" key={t}><span>{i + 1}</span><h3>{t}</h3><p>{d}</p></Reveal>
-            ))}
-          </div>
           <Reveal as="ul" className="quality">
             {quality.map(q => <li key={q}>{q}</li>)}
           </Reveal>

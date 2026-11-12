@@ -473,3 +473,25 @@ h2{text-transform:none;font-weight:700;letter-spacing:-.01em}
   .purpose-head{flex-direction:column;align-items:flex-start}
 }
 .rows a,.rows a:hover{text-decoration:none;color:inherit}
+
+/* ---- Inner pages: Range + Energy ---- */
+.hero3-sm h1{font-size:clamp(2.6rem,6vw,5rem)}
+.hero3-sm .eyebrow{margin:0 0 14px}
+.h2x{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:800;letter-spacing:-.025em;line-height:1.05;text-transform:none;margin:0 0 28px;max-width:16ch}
+.h2x em{font-style:normal;color:var(--gold)}
+.stat-trio .ic{min-height:240px}
+.ic-stat.dark{background:var(--green);color:#fff}
+.ic-stat.dark strong{color:var(--gold-2)}
+.ic-stat.light{background:var(--cream-2);color:var(--green)}
+.rows .ri{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start;padding:20px 0}
+.how2{padding-bottom:72px}
+.how2 .quality{margin-top:48px}
+.range .card{border-radius:32px;position:relative}
+.range .card.featured{background:var(--green);color:#fff}
+.range .card.featured .spec b{color:var(--gold-2)}
+.card-n{position:absolute;top:22px;right:26px;font-weight:700;color:var(--gold-3);opacity:.8}
+.range .calc{border-radius:32px}
+.range .card.featured h3,.range .card.featured p{color:#fff}
+.range .card.featured .spec{color:#fff}
+.how2 .quality li{color:var(--green)}
+.ic-stat.dark span{color:#fff}
