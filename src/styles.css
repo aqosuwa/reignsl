@@ -620,3 +620,13 @@ section{padding:104px 0}
 @media (max-width:900px){.hero2{margin-top:108px}}
 .contact{margin-top:118px;padding-top:72px}
 .page-hero{padding-top:150px}
+
+/* island svg sizing + tidy stat cards */
+.hero4-visual{width:50%;right:0;bottom:30px}
+.hero4-visual img{filter:none}
+@media (max-width:900px){.hero4-visual{width:100%}}
+.stat-trio{grid-template-columns:repeat(3,1fr)}
+.stat-trio .ic{min-height:210px;padding:30px;align-items:flex-start;justify-content:space-between}
+.stat-trio .ic-stat strong{font-size:4.6rem}
+.stat-trio .ic-stat span{margin:0;font-size:1.02rem;line-height:1.35;max-width:22ch}
+@media (max-width:900px){.stat-trio{grid-template-columns:1fr}}
