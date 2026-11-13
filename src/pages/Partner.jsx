@@ -4,6 +4,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 import usePageMeta from '../components/usePageMeta.js'
 import { PageHero } from '../components/Sections.jsx'
+import { sendForm } from '../sendForm.js'
 
 const cards = [
   ['Homes & businesses', 'Tell us what you need to keep running. We will recommend the right size and let you know when we launch.', 'Customer', 'Register interest →', asset('/assets/photos/shop-owner.jpg'), 'Shop owner at his counter'],
@@ -27,13 +28,19 @@ function ApplyForm() {
       ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }, [fromLink])
-  const submit = e => {
+  const submit = async e => {
     e.preventDefault()
     if (!f.name || !/^\S+@\S+\.\S+$/.test(f.email)) { setMsg('Please add your name and a valid email.'); return }
     const subject = `REIGN partnership: ${f.role}`
     const body = `${f.message}\n\nName: ${f.name}\nEmail: ${f.email}\nPhone: ${f.phone}\nBusiness: ${f.org}\nCity: ${f.city}\nI am a: ${f.role}`
-    window.location.href = `mailto:info@reignsl.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    setMsg('Opening your email app. Thank you, we will reply by email.')
+    setMsg('Sending...')
+    try {
+      const r = await sendForm(subject, { name: f.name, email: f.email, phone: f.phone, business: f.org, city: f.city, role: f.role, message: f.message }, body)
+      if (r === 'sent') setF(v => ({ ...v, message: '' }))
+      setMsg(r === 'sent' ? 'Thank you, your request has been sent. We will reply by email.' : 'Opening your email app. Thank you, we will reply by email.')
+    } catch {
+      setMsg('Sorry, that did not send. Please email info@reignsl.com directly.')
+    }
   }
   return (
     <section className="apply" ref={ref} id="apply">

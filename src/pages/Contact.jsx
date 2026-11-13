@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 import usePageMeta from '../components/usePageMeta.js'
+import { sendForm } from '../sendForm.js'
 
 const roles = ['Customer', 'Dealer or installer', 'Investor or partner', 'Other']
 
@@ -13,8 +14,7 @@ export default function Contact() {
   const [msg, setMsg] = useState('')
   const set = k => e => setForm(f => ({ ...f, [k]: e.target.value }))
 
-  // Opens the visitor's email app addressed to info@reignsl.com (no backend needed yet).
-  const submit = e => {
+  const submit = async e => {
     e.preventDefault()
     if (!form.name || !/^\S+@\S+\.\S+$/.test(form.email) || !form.message) {
       setMsg('Please fill in your name, a valid email and a message.')
@@ -22,8 +22,14 @@ export default function Contact() {
     }
     const subject = `REIGN enquiry: ${form.role}`
     const body = `${form.message}\n\n${form.name}\n${form.email}`
-    window.location.href = `mailto:info@reignsl.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    setMsg('Opening your email app. Thank you for reaching out.')
+    setMsg('Sending...')
+    try {
+      const r = await sendForm(subject, { name: form.name, email: form.email, role: form.role, message: form.message }, body)
+      if (r === 'sent') setForm(f => ({ ...f, message: '' }))
+      setMsg(r === 'sent' ? 'Thank you, your message has been sent. We will reply by email.' : 'Opening your email app. Thank you for reaching out.')
+    } catch {
+      setMsg('Sorry, that did not send. Please email info@reignsl.com directly.')
+    }
   }
 
   return (
