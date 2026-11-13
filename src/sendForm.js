@@ -1,6 +1,6 @@
 // Paste your Formspree form URL here (looks like https://formspree.io/f/abcdwxyz).
 // While this is empty, forms fall back to opening the visitor's email app.
-export const FORM_ENDPOINT = ''
+export const FORM_ENDPOINT = 'https://formspree.io/f/mvkagdyw'
 export const FORM_EMAIL = 'info@reignsl.com'
 
 // Returns 'sent' (delivered to the form service) or 'mailto' (email app opened).
