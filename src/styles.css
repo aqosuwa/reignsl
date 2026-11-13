@@ -974,3 +974,46 @@ body{font-size:17px}
   .contact2{padding-top:128px}
 }
 @media (max-width:420px){.apply .wrap{padding-inline:14px}.role-seg button{font-size:.82rem;padding:11px 6px}}
+
+/* ===== Mobile spacing + polish pass (whole site) ===== */
+@media (max-width:900px){
+  section{padding:44px 0}
+  .intro,.svc-list,.purpose,.faq,.divs,.hyb,.energy-more,.stat-sec{padding-top:44px;padding-bottom:0}
+  .faq{padding-bottom:48px}
+  .hyb{padding-bottom:48px}
+  .hero4{padding-bottom:40px}
+  .hero4-visual{margin-top:12px;bottom:auto}
+  .hero4-visual img{width:86%;margin:0 auto;display:block}
+  .hero4::after{height:14px}
+  .intro h2,.svc-list h2,.purpose h2,.faq h2{margin-bottom:16px}
+  h2{text-wrap:balance}
+  .wrap{padding-inline:20px}
+  .hyb-feature{margin-top:36px}
+  .cta-card,.cta{padding-block:44px}
+  .btn{min-height:46px}
+}
+@media (max-width:520px){
+  body{font-size:15.5px}
+  .page-hero{padding:48px 0 32px}
+  .cards.three,.cards{gap:16px}
+}
+
+/* ===== Mobile: About + shared cards ===== */
+@media (max-width:640px){
+  .ab-why-grid,.hyb-grid{grid-template-columns:1fr}
+  .ab-card{padding:22px 20px}
+  .ab-stats-grid{padding:22px 8px;row-gap:22px}
+  .ab-stats-grid strong{font-size:1.6rem;line-height:1.2}
+  .ab-stats-grid span{font-size:.85rem}
+  .ab-stats-grid div:nth-child(3){border-left:0}
+  .ab-head{text-align:left;margin-bottom:26px}
+  .ab-gal-grid{grid-template-columns:1fr 1fr!important}
+  .ab-gallery{padding:44px 0}
+  .ab-why{padding:20px 0 44px}
+  .ab-stats{padding:10px 0 44px}
+}
+@media (max-width:640px){
+  .ab-ico{margin-bottom:10px!important}
+  .ab-card h3{margin-top:0!important}
+  .hero3-actions{gap:10px}
+}
