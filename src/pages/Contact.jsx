@@ -1,3 +1,4 @@
+import { asset } from '../asset.js'
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
@@ -36,6 +37,7 @@ export default function Contact() {
     <section className="apply contact2">
       <Reveal className="wrap apply-card">
         <div className="apply-info">
+          <img className="apply-photo" src={asset('/assets/photos/meeting.jpg')} alt="People in a discussion" loading="lazy" />
           <p className="eyebrow gold">Contact</p>
           <h2>Let&rsquo;s talk</h2>
           <p>Questions about the range, want to become a dealer or installer, or interested in investing? Send us a message and tell us which fits. We will reply by email.</p>

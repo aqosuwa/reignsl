@@ -1,10 +1,26 @@
 import { asset } from '../asset.js'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 import usePageMeta from '../components/usePageMeta.js'
 import { CTA } from '../components/Sections.jsx'
 
+const WORK_PHOTOS = [
+  ['/assets/photos/presenter.jpg', 'A presenter explaining an idea to a team'],
+  ['/assets/photos/handshake.jpg', 'Two business partners shaking hands'],
+  ['/assets/photos/port.jpg', 'A container ship being unloaded at a port'],
+  ['/assets/photos/roof-technician.jpg', 'Technician connecting solar panel cables on a rooftop'],
+  ['/assets/photos/team-briefing.jpg', 'A supervisor briefing a team of workers'],
+]
+
 export default function Home() {
+  const [on, setOn] = useState(0)
+  const [hold, setHold] = useState(false)
+  useEffect(() => {
+    if (hold) return undefined
+    const id = setInterval(() => setOn(i => (i + 1) % WORK_PHOTOS.length), 4200)
+    return () => clearInterval(id)
+  }, [hold])
   usePageMeta('REIGN | Powering Lives. Empowering Nations.', 'REIGN is a company built on innovation, economic growth, strategic partnership and global excellence. REIGN Energy brings affordable lithium power to Sierra Leone first, West Africa next.')
   return (
     <>
@@ -95,7 +111,7 @@ export default function Home() {
                 ['Installation and aftercare', 'Qualified electricians, local warranty, spare parts and repairs.', '/energy'],
                 ['Training and local jobs', 'We grow technician skills and create work wherever we operate.', '/partner'],
               ].map(([t, d, to], i) => (
-                <li key={t}>
+                <li key={t} className={on === i ? 'on' : ''} onMouseEnter={() => { setOn(i); setHold(true) }} onMouseLeave={() => setHold(false)} onFocus={() => { setOn(i); setHold(true) }} onBlur={() => setHold(false)}>
                   <Link to={to}>
                     <span className="row-n">{String(i + 1).padStart(2, '0')}</span>
                     <span className="row-t"><b>{t}</b><small>{d}</small></span>
@@ -106,7 +122,11 @@ export default function Home() {
             </ul>
           </Reveal>
           <Reveal className="svc-list-photo">
-            <img src={asset('/assets/photos/roof-technician.jpg')} alt="Technician connecting solar panel cables on a rooftop" />
+            <div className="swap">
+              {WORK_PHOTOS.map(([src, alt], i) => (
+                <img key={src} src={asset(src)} alt={on === i ? alt : ''} aria-hidden={on !== i} className={on === i ? 'on' : ''} />
+              ))}
+            </div>
           </Reveal>
         </div>
       </section>

@@ -54,6 +54,23 @@ export default function Businesses() {
             ))}
           </div>
 
+          <Reveal className="chain">
+            <div className="ab-head"><p className="eyebrow">Across the chain</p><h2>From the port to your <em>front door</em></h2></div>
+            <div className="chain-grid">
+              {[
+                ['Sourcing and supply', 'Quality-checked products, imported and cleared properly.', '/assets/photos/port.jpg', 'A container ship being unloaded at a port'],
+                ['Retail and distribution', 'Sold to households and small businesses through trained local dealers.', '/assets/photos/market.jpg', 'A busy West African market with traders and stalls'],
+                ['Installation', 'Qualified electricians fit the inverter and battery system safely.', '/assets/photos/inverter-batteries.jpg', 'A hybrid inverter with four lithium batteries installed on a wall'],
+                ['Training and jobs', 'Technician and dealer training that creates local work.', '/assets/photos/team-briefing.jpg', 'A supervisor briefing a team of workers'],
+              ].map(([t, d, img, alt]) => (
+                <figure className="chain-card" key={t}>
+                  <img src={asset(img)} alt={alt} loading="lazy" />
+                  <figcaption><b>{t}</b><span>{d}</span></figcaption>
+                </figure>
+              ))}
+            </div>
+          </Reveal>
+
           <Reveal className="bz-next">
             <div>
               <span className="div-tag alt">Built to grow</span>

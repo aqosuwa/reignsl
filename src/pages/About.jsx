@@ -12,7 +12,7 @@ const why = [
   ['Strong partners', 'We work with trusted manufacturers, dealers, installers and investors.'],
   ['Built to last', 'Quality checks, proper installation and local warranty support.'],
 ]
-const gallery = ['shop-owner', 'cafe-owner', 'roof-technician', 'panel-closeup', 'panel-lift', 'installer-kneeling', 'freetown-hillside', 'rooftops-aerial']
+const gallery = ['shop-owner', 'cafe-owner', 'roof-technician', 'panel-closeup', 'panel-lift', 'installer-kneeling', 'freetown-hillside', 'rooftops-aerial', 'market', 'port', 'team-briefing', 'handshake']
 const perks = ['Dealer and installer training', 'Genuine products with local warranty', 'Clear pricing and support', 'Room to grow across West Africa']
 
 export default function About() {

@@ -46,6 +46,7 @@ function ApplyForm() {
     <section className="apply" ref={ref} id="apply">
       <Reveal className="wrap apply-card">
         <div className="apply-info">
+          <img className="apply-photo" src={asset('/assets/photos/handshake.jpg')} alt="Two business partners shaking hands" loading="lazy" />
           <p className="eyebrow gold">Partner with us</p>
           <h2>Tell us how you want to work with REIGN</h2>
           <p>Share a few details and we will come back with next steps, usually within a few working days.</p>

@@ -123,11 +123,14 @@ export default function Energy() {
               <div className="hero3-actions"><Link to="/contact" className="btn">Book a site survey</Link><Link to="/products" className="btn btn-gold">See the range</Link></div>
               <small>Figures are design targets, not verified manufacturer models.</small>
             </div>
-            <div className="hyb-flow" aria-hidden="true">
+            <div className="hyb-side">
+              <img src={asset('/assets/photos/inverter-batteries.jpg')} alt="A hybrid inverter with four lithium batteries installed on a wall" loading="lazy" />
+              <div className="hyb-flow" aria-hidden="true">
               <span>Solar</span><span>Grid</span><span>Generator</span>
               <b>Hybrid inverter</b>
               <b className="bat">Lithium battery</b>
               <span className="out">Your loads</span>
+              </div>
             </div>
           </Reveal>
 
