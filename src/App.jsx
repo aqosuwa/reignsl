@@ -4,6 +4,7 @@ import Footer from './components/Footer.jsx'
 import ScrollManager from './components/ScrollManager.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import Businesses from './pages/Businesses.jsx'
 import Energy from './pages/Energy.jsx'
 import Products from './pages/Products.jsx'
 import Partner from './pages/Partner.jsx'
@@ -19,6 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/businesses" element={<Businesses />} />
           <Route path="/energy" element={<Energy />} />
           <Route path="/products" element={<Products />} />
           <Route path="/partner" element={<Partner />} />

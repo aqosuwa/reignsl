@@ -5,18 +5,18 @@ import usePageMeta from '../components/usePageMeta.js'
 import { Pillars, VisionMission, Roadmap } from '../components/Sections.jsx'
 
 const P = n => asset(`/assets/photos/${n}.jpg`)
-const stats = [['5', 'Power sizes'], ['3', 'Ways to charge'], ['4', 'Cities to start'], ['15 kWh', 'Largest system']]
+const stats = [['4', 'Core pillars'], ['1', 'Business launching'], ['4', 'Cities to start'], ['West Africa', 'Next']]
 const why = [
-  ['Proper installation', 'Every system is sized to your real needs and fitted by a trained technician.'],
-  ['Safe lithium batteries', 'LiFePO4 chemistry with built-in protection, made for daily use.'],
-  ['Local warranty', 'Support and repairs happen here in Sierra Leone, not overseas.'],
-  ['Honest advice', 'We tell you how long a system will run before you buy it.'],
+  ['Local first', 'We start in Sierra Leone and build proper local teams, not just imports.'],
+  ['Honest advice', 'We tell you what a product will really do before you buy it.'],
+  ['Strong partners', 'We work with trusted manufacturers, dealers, installers and investors.'],
+  ['Built to last', 'Quality checks, proper installation and local warranty support.'],
 ]
 const gallery = ['shop-owner', 'cafe-owner', 'roof-technician', 'panel-closeup', 'panel-lift', 'installer-kneeling', 'freetown-hillside', 'rooftops-aerial']
 const perks = ['Dealer and installer training', 'Genuine products with local warranty', 'Clear pricing and support', 'Room to grow across West Africa']
 
 export default function About() {
-  usePageMeta('About | REIGN', 'About REIGN: our commitments, vision, mission and roadmap from Sierra Leone to West Africa.')
+  usePageMeta('About | REIGN', 'About REIGN: a parent company built on innovation, partnerships, economic growth and global excellence, starting in Sierra Leone.')
   return (
     <>
       <section className="ab-intro">
@@ -28,13 +28,13 @@ export default function About() {
             <img className="c4" src={P('rooftops-aerial')} alt="Rooftops in a residential area" />
           </Reveal>
           <Reveal>
-            <h2>Built to keep the power on</h2>
-            <p>REIGN is a new company starting in Sierra Leone. Our first division, REIGN Energy, sells and installs rechargeable lithium batteries so homes, shops and small businesses can keep working when the grid goes down.</p>
+            <h2>Powering lives, empowering nations</h2>
+            <p>REIGN is a parent company built on innovation, strategic partnerships, economic growth and global excellence. We start in Sierra Leone, and our first business, REIGN Energy, brings affordable lithium power to homes, shops and small businesses.</p>
             <div className="ab-feats">
-              <div><b>Simple to run</b><span>Plug in, charge from the grid, solar or a generator.</span></div>
-              <div><b>Backed locally</b><span>Installation and warranty support close to you.</span></div>
+              <div><b>Built to grow</b><span>One parent company, with room for new businesses over time.</span></div>
+              <div><b>Backed locally</b><span>Teams, service and support close to the people we serve.</span></div>
             </div>
-            <Link to="/contact" className="btn">Contact us &rarr;</Link>
+            <Link to="/businesses" className="btn">Our businesses &rarr;</Link>
           </Reveal>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function About() {
 
       <section className="ab-why">
         <div className="wrap">
-          <Reveal className="ab-head"><p className="eyebrow">Why choose us</p><h2>We provide power you can count on</h2></Reveal>
+          <Reveal className="ab-head"><p className="eyebrow">Why choose us</p><h2>How REIGN does business</h2></Reveal>
           <div className="ab-why-grid">
             {why.map(([t, d], i) => (
               <Reveal className="ab-card" key={t}>
@@ -64,7 +64,7 @@ export default function About() {
 
       <section className="ab-gallery">
         <div className="wrap">
-          <Reveal className="ab-head"><p className="eyebrow">In the field</p><h2>Power at work in Sierra Leone</h2></Reveal>
+          <Reveal className="ab-head"><p className="eyebrow">In the field</p><h2>REIGN at work in Sierra Leone</h2></Reveal>
           <Reveal className="ab-gal-grid">
             {gallery.map((n, i) => <img key={i} src={P(n)} alt="" loading="lazy" />)}
           </Reveal>
@@ -77,8 +77,8 @@ export default function About() {
         <Reveal className="ab-cta">
           <div>
             <h2>Ready to get started?</h2>
-            <p>Tell us what you need to power and we will recommend the right system.</p>
-            <Link to="/products" className="btn">See the range</Link>
+            <p>Tell us what you are looking for and we will point you to the right person.</p>
+            <Link to="/contact" className="btn">Contact us</Link>
           </div>
           <img src={P('panel-lift')} alt="Panel being lifted onto a roof" />
         </Reveal>

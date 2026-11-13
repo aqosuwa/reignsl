@@ -5,12 +5,12 @@ import { NavLink, Link, useLocation } from 'react-router-dom'
 const links = [
   ['/', 'Home'],
   ['/about', 'About'],
+  ['/businesses', 'Businesses'],
   ['/energy', 'REIGN Energy'],
-  ['/products', 'Range'],
   ['/partner', 'Partner'],
 ]
 
-const items = ['Power Mini', 'Power Home', 'Power Plus', 'Power Business', 'Power Industrial', 'Freetown', 'Bo', 'Kenema', 'Makeni', 'Solar-ready', 'Local warranty']
+const items = ['Powering Lives', 'Empowering Nations', 'REIGN Energy', 'Freetown', 'Bo', 'Kenema', 'Makeni', 'Sierra Leone first', 'West Africa next', 'Local warranty']
 
 export default function Header() {
   const [open, setOpen] = useState(false)
