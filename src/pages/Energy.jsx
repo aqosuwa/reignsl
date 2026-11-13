@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { asset } from '../asset.js'
 import Reveal from '../components/Reveal.jsx'
 import usePageMeta from '../components/usePageMeta.js'
@@ -89,6 +90,61 @@ export default function Energy() {
             <div className="use"><b>Offices and cafés</b><p>Laptops, routers, coffee machines and tills stay up through every cut.</p></div>
             <div className="use"><b>Clinics and workshops</b><p>Steady power for small equipment, with room to grow as you add more.</p></div>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="hyb">
+        <div className="wrap">
+          <Reveal className="ab-head"><p className="eyebrow">Charging</p><h2>One battery, <em>many ways</em> to charge</h2></Reveal>
+          <div className="hyb-grid">
+            {[
+              ['Grid', 'Charge from the mains whenever supply is available, with input-voltage protection.'],
+              ['Solar', 'Add matched panels with an MPPT controller, now or later. Solar is optional, never required.'],
+              ['Generator', 'Use an approved generator input as a fallback on long outages. Fuel is still used, but far less.'],
+              ['Hybrid', 'A hybrid inverter combines these sources at once, so the system charges and powers your loads together.'],
+            ].map(([t, d], i) => (
+              <Reveal className="ab-card" key={t}>
+                <span className="ab-ico">{String(i + 1).padStart(2, '0')}</span>
+                <h3>{t}</h3><p>{d}</p>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal as="p" className="source">Never connect a system to a house socket to feed power back. Fixed systems need a qualified electrician, an isolation or transfer switch and proper earthing.</Reveal>
+
+          <Reveal className="hyb-feature">
+            <div>
+              <span className="div-tag">Made to order</span>
+              <h3>Hybrid installations for businesses</h3>
+              <p>Power Business and Power Industrial are designed as complete hybrid systems: a large lithium battery, a hybrid inverter, solar panels and a backup generator input, all working together. We survey your site first and size the system to your loads.</p>
+              <ul>
+                <li><b>Power Business</b> 5,120 Wh, 3,000 W</li>
+                <li><b>Power Industrial</b> 15,360 Wh, 8,000 W, with a 5 to 8 kW hybrid charging target and 4 to 8 kW of solar</li>
+              </ul>
+              <div className="hero3-actions"><Link to="/contact" className="btn">Book a site survey</Link><Link to="/products" className="btn btn-gold">See the range</Link></div>
+              <small>Figures are design targets, not verified manufacturer models.</small>
+            </div>
+            <div className="hyb-flow" aria-hidden="true">
+              <span>Solar</span><span>Grid</span><span>Generator</span>
+              <b>Hybrid inverter</b>
+              <b className="bat">Lithium battery</b>
+              <span className="out">Your loads</span>
+            </div>
+          </Reveal>
+
+          <Reveal className="ab-head" style={{ marginTop: 80 }}><p className="eyebrow">The battery</p><h2>What is <em>LiFePO4</em> lithium?</h2></Reveal>
+          <div className="hyb-grid">
+            {[
+              ['Safer chemistry', 'Lithium iron phosphate is more stable than other lithium types, and a battery management system guards against heat, shorts and overload.'],
+              ['Built to last', 'Designed for 3,000+ charge cycles to 80% capacity, which means years of daily use.'],
+              ['Clean power', 'A pure sine-wave inverter gives a steady 230 V, 50 Hz supply that is safe for electronics.'],
+              ['Honest runtime', 'Battery size sets how long it runs, and inverter watts set how much you can run at once. We explain both before you buy.'],
+            ].map(([t, d], i) => (
+              <Reveal className="ab-card" key={t}>
+                <span className="ab-ico">{String(i + 1).padStart(2, '0')}</span>
+                <h3>{t}</h3><p>{d}</p>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
