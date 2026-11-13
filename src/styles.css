@@ -957,3 +957,20 @@ body{font-size:17px}
 .hyb-flow .out{grid-column:1/-1;border-style:dashed;color:#4cc47f}
 @media (max-width:900px){.hyb-grid{grid-template-columns:1fr 1fr}.hyb-feature{grid-template-columns:1fr;padding:30px 22px;gap:28px}}
 @media (max-width:520px){.hyb-grid{grid-template-columns:1fr}}
+
+/* ===== Contact + form polish ===== */
+.contact2{padding-top:150px}
+.apply-line a{color:#4cc47f;text-decoration:none}
+.role-seg4{grid-template-columns:repeat(4,1fr)}
+.role-seg button{line-height:1.2}
+.apply-form .form-msg{min-height:1.4em;font-weight:600}
+.apply-form .btn:disabled{opacity:.6}
+@media (max-width:900px){
+  .role-seg,.role-seg4{grid-template-columns:1fr 1fr}
+  .apply-form .btn{justify-self:stretch;width:100%}
+  .apply-form{gap:16px}
+  .apply-info h2{font-size:1.7rem}
+  .apply{padding-bottom:60px}
+  .contact2{padding-top:128px}
+}
+@media (max-width:420px){.apply .wrap{padding-inline:14px}.role-seg button{font-size:.82rem;padding:11px 6px}}

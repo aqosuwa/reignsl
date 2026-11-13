@@ -33,26 +33,31 @@ export default function Contact() {
   }
 
   return (
-    <section className="contact">
-      <div className="wrap contact-grid">
-        <Reveal>
+    <section className="apply contact2">
+      <Reveal className="wrap apply-card">
+        <div className="apply-info">
           <p className="eyebrow gold">Contact</p>
           <h2>Let&rsquo;s talk</h2>
           <p>Questions about the range, want to become a dealer or installer, or interested in investing? Send us a message and tell us which fits. We will reply by email.</p>
-          <p className="contact-line"><a href="mailto:info@reignsl.com">info@reignsl.com</a></p>
-          <p className="contact-line dim">Starting in Freetown, Sierra Leone</p>
-        </Reveal>
-        <Reveal as="form" className="form" onSubmit={submit} noValidate>
-          <label>Name<input type="text" value={form.name} onChange={set('name')} autoComplete="name" required /></label>
-          <label>Email<input type="email" value={form.email} onChange={set('email')} autoComplete="email" required /></label>
-          <label>I am a
-            <select value={form.role} onChange={set('role')}>{roles.map(r => <option key={r}>{r}</option>)}</select>
-          </label>
-          <label>Message<textarea rows="4" value={form.message} onChange={set('message')} required /></label>
+          <ul>
+            <li>Replies by email, usually within a few working days</li>
+            <li>Customers, dealers, installers and investors welcome</li>
+          </ul>
+          <p className="apply-line"><a href="mailto:info@reignsl.com">info@reignsl.com</a><br /><span>Starting in Freetown, Sierra Leone</span></p>
+        </div>
+        <form className="apply-form" onSubmit={submit} noValidate>
+          <div className="role-seg role-seg4" role="group" aria-label="I am a">
+            {roles.map(r => <button type="button" key={r} className={form.role === r ? 'on' : ''} onClick={() => setForm(f => ({ ...f, role: r }))}>{r}</button>)}
+          </div>
+          <div className="af-row">
+            <label>Full name<input type="text" value={form.name} onChange={set('name')} placeholder="Your name" autoComplete="name" /></label>
+            <label>Email<input type="email" value={form.email} onChange={set('email')} placeholder="you@example.com" autoComplete="email" /></label>
+          </div>
+          <label>Message<textarea rows="5" value={form.message} onChange={set('message')} placeholder="How can we help?" /></label>
           <button type="submit" className="btn">Send message</button>
           <p className="form-msg" role="status">{msg}</p>
-        </Reveal>
-      </div>
+        </form>
+      </Reveal>
     </section>
   )
 }
