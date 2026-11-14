@@ -112,26 +112,24 @@ export default function Energy() {
           <Reveal as="p" className="source">Never connect a system to a house socket to feed power back. Fixed systems need a qualified electrician, an isolation or transfer switch and proper earthing.</Reveal>
 
           <Reveal className="hyb-feature">
-            <div>
+            <div className="hf-copy">
               <span className="div-tag">Made to order</span>
               <h3>Hybrid installations for businesses</h3>
-              <p>Power Business and Power Industrial are designed as complete hybrid systems: a large lithium battery, a hybrid inverter, solar panels and a backup generator input, all working together. We survey your site first and size the system to your loads.</p>
-              <ul>
-                <li><b>Power Business</b> 5,120 Wh, 3,000 W</li>
-                <li><b>Power Industrial</b> 15,360 Wh, 8,000 W, with a 5 to 8 kW hybrid charging target and 4 to 8 kW of solar</li>
-              </ul>
-              <div className="hero3-actions"><Link to="/contact" className="btn">Book a site survey</Link><Link to="/products" className="btn btn-gold">See the range</Link></div>
-              <small>Figures are design targets, not verified manufacturer models.</small>
-            </div>
-            <div className="hyb-side">
-              <img src={asset('/assets/photos/inverter-batteries.jpg')} alt="A hybrid inverter with four lithium batteries installed on a wall" loading="lazy" />
-              <div className="hyb-flow" aria-hidden="true">
-              <span>Solar</span><span>Grid</span><span>Generator</span>
-              <b>Hybrid inverter</b>
-              <b className="bat">Lithium battery</b>
-              <span className="out">Your loads</span>
+              <p>Power Business and Power Industrial are complete hybrid systems: a large lithium battery, a hybrid inverter, solar panels and a backup generator input working together. We survey your site first and size the system to your loads.</p>
+              <div className="hf-specs">
+                <div><b>Power Business</b><strong>5,120 Wh</strong><span>3,000 W</span></div>
+                <div><b>Power Industrial</b><strong>15,360 Wh</strong><span>8,000 W</span></div>
               </div>
+              <p className="hf-note">Industrial targets a 5 to 8 kW hybrid charging input and 4 to 8 kW of solar. Figures are design targets, not verified manufacturer models.</p>
+              <div className="hf-actions"><Link to="/contact" className="btn btn-gold">Book a site survey</Link><Link to="/products" className="hf-link">See the range &rarr;</Link></div>
             </div>
+            <img className="hf-photo" src={asset('/assets/photos/inverter-batteries.jpg')} alt="A hybrid inverter with four lithium batteries installed on a wall" loading="lazy" />
+            <ol className="hf-flow" aria-label="How the system works">
+              <li><b>Charge from</b><span>Solar, grid or generator</span></li>
+              <li><b>Hybrid inverter</b><span>Combines the sources</span></li>
+              <li><b>Lithium battery</b><span>Stores the power</span></li>
+              <li><b>Your loads</b><span>Lights, fridges, machines</span></li>
+            </ol>
           </Reveal>
 
           <Reveal className="ab-head" style={{ marginTop: 80 }}><p className="eyebrow">The battery</p><h2>What is <em>LiFePO4</em> lithium?</h2></Reveal>
