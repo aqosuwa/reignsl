@@ -60,10 +60,29 @@ function RuntimeCalc() {
 }
 
 export default function Products() {
-  usePageMeta('The REIGN Power range', 'Five REIGN Power sizes from 400 Wh to 15 kWh, plus a runtime estimator.')
+  usePageMeta('The REIGN Power range', 'REIGN Power lithium generators: five sizes from 400 Wh to 15 kWh. Quiet, fuel-free battery power with a runtime estimator.')
   return (
     <>
-      <PageHero image={asset('/assets/photos/panel-closeup.jpg')} alt="Solar panel being fitted on a roof" eyebrow="The range" title="REIGN" accent="Power" lead="Five sizes, from a phone charger to a workshop. We lead with Mini, Home and Plus; Business and Industrial are supplied to order after a site assessment." />
+      <PageHero image={asset('/assets/photos/panel-closeup.jpg')} alt="Solar panel being fitted on a roof" eyebrow="The range" title="REIGN" accent="Power" lead="Lithium generators in five sizes, from a phone charger to a workshop. No fuel, no noise, no fumes. We lead with Mini, Home and Plus; Business and Industrial are supplied to order after a site assessment." />
+      <section className="lg">
+        <div className="wrap">
+          <Reveal className="lg-card">
+            <div>
+              <p className="eyebrow gold">Lithium generators</p>
+              <h2>A generator with <em>no fuel</em></h2>
+              <p>REIGN Power is a lithium generator: a battery and inverter in one unit that keeps your lights, fridge and router running when the grid goes off. It stores power instead of burning fuel, so it is quiet and produces no exhaust fumes.</p>
+            </div>
+            <ul>
+              <li><b>No fuel</b><span>No petrol to buy, carry or store.</span></li>
+              <li><b>Silent and clean</b><span>No engine noise or exhaust fumes.</span></li>
+              <li><b>Charge three ways</b><span>Grid, solar panels, or a petrol generator as backup.</span></li>
+              <li><b>Five sizes</b><span>From a phone charger to a workshop, sized to what you run.</span></li>
+            </ul>
+            <small>A lithium generator stores electricity and does not make it. It must be recharged from the grid, solar or a backup generator.</small>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="range">
         <div className="wrap">
           <div className="pr-grid">

@@ -1039,3 +1039,16 @@ body{font-size:17px}
 @media (max-width:900px){.chain-grid{grid-template-columns:1fr 1fr}.swap{position:relative;top:auto;aspect-ratio:4/3}.hyb-side img{height:220px}}
 @media (max-width:520px){.chain-grid{grid-template-columns:1fr}.chain{margin-top:52px}.apply-photo{aspect-ratio:16/9;margin-bottom:20px}}
 @media (max-width:900px){.swap img{aspect-ratio:auto!important;height:100%!important}}
+
+/* ===== Lithium generator band ===== */
+.lg{padding:56px 0 0}
+.lg-card{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;padding:44px;border-radius:var(--r-lg);background:var(--cream-2);border:1px solid rgba(14,36,23,.08)}
+.lg-card h2{margin:10px 0 14px}
+.lg-card p{color:#44524a}
+.lg-card ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.lg-card li{background:#fff;border-radius:var(--r);padding:18px;border:1px solid rgba(14,36,23,.08);display:grid;gap:6px}
+.lg-card li b{color:var(--gold-3)}
+.lg-card li span{color:#5d6b63;font-size:.92rem;line-height:1.45}
+.lg-card small{grid-column:1/-1;color:#5d6b63}
+@media (max-width:900px){.lg{padding-top:40px}.lg-card{grid-template-columns:1fr;padding:26px 20px;gap:24px}}
+@media (max-width:520px){.lg-card ul{grid-template-columns:1fr}}
