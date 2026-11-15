@@ -24,27 +24,28 @@ export default function Home() {
   usePageMeta('REIGN | Powering Lives. Empowering Nations.', 'REIGN is a company built on innovation, economic growth, strategic partnership and global excellence. REIGN Energy brings affordable lithium power to Sierra Leone first, West Africa next.')
   return (
     <>
-      <section className="hero2">
-        <div className="hero2-card">
-          <div className="hero4">
-            <Reveal as="h1" className="hero4-h1">Powering <em>Lives.</em><br /><em>Empowering</em> Nations</Reveal>
-            <Reveal className="hero3-copy hero4-body">
-              <p>REIGN is a Sierra Leone company built on innovation, partnerships and economic growth. Our first business, REIGN Energy, brings reliable lithium power to homes and businesses.</p>
-              <div className="hero3-actions">
-                <Link to="/businesses" className="btn">Our businesses</Link>
-                <Link to="/contact" className="btn btn-gold">Get in touch</Link>
-                <Link to="/about" className="circle-btn" aria-label="About REIGN">&#8599;</Link>
-              </div>
-              <dl className="hero3-stats">
-                <div><dt>4</dt><dd>pillars: innovation,<br />growth, partnership, excellence</dd></div>
-                <div><dt>1</dt><dd>business launching:<br />REIGN Energy</dd></div>
-                <div><dt>4</dt><dd>cities: Freetown, Bo,<br />Kenema, Makeni</dd></div>
-              </dl>
-            </Reveal>
-            <Reveal className="hero4-visual">
-              <img src={asset('/assets/hero-island.svg')} alt="Floating island with solar panels, wind turbines, trees and homes" />
+      <section className="hero5">
+        <div className="wrap hero5-grid">
+          <div className="hero5-copy">
+            <Reveal as="p" className="kicker">Sierra Leone &middot; West Africa</Reveal>
+            <Reveal as="h1">Powering lives.<br /><em>Empowering</em> nations.</Reveal>
+            <Reveal as="p" className="hero5-lead">REIGN is a Sierra Leone company built on innovation, partnerships and economic growth. Our first business, REIGN Energy, brings reliable lithium power to homes and businesses.</Reveal>
+            <Reveal className="hero5-actions">
+              <Link to="/businesses" className="btn">Our businesses</Link>
+              <Link to="/contact" className="hero5-link">Get in touch &rarr;</Link>
             </Reveal>
           </div>
+          <Reveal className="hero5-photo">
+            <img src={asset('/assets/photos/freetown-hillside.jpg')} alt="Freetown hillside at dusk" />
+            <span>Freetown, Sierra Leone</span>
+          </Reveal>
+        </div>
+        <div className="wrap">
+          <dl className="hero5-stats">
+            <div><dt>4</dt><dd>Pillars: innovation, growth, partnership, excellence</dd></div>
+            <div><dt>1</dt><dd>Business launching: REIGN Energy</dd></div>
+            <div><dt>4</dt><dd>Cities to start: Freetown, Bo, Kenema, Makeni</dd></div>
+          </dl>
         </div>
       </section>
 
@@ -168,7 +169,7 @@ export default function Home() {
       <section className="faq">
         <div className="wrap faq-grid">
           <Reveal className="faq-photo">
-            <img src={asset('/assets/photos/freetown-hillside.jpg')} alt="Freetown homes on a hillside at dusk" />
+            <img src={asset('/assets/photos/market.jpg')} alt="Traders and produce stalls in a West African market" />
           </Reveal>
           <Reveal>
             <h2>Questions <em>people ask</em></h2>
