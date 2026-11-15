@@ -1117,3 +1117,47 @@ body{font-size:17px}
   .contact2{padding-top:128px}
 }
 @media (max-width:640px){.role-seg:not(.role-seg4){grid-template-columns:1fr!important}}
+
+/* =====================================================================
+   Unified cards: one radius, one soft outline, one hover, one padding
+   ===================================================================== */
+:root{--card-r:16px;--card-line:rgba(14,36,23,.09);--card-shadow:0 1px 2px rgba(14,36,23,.04);--card-hover:0 18px 34px -22px rgba(14,36,23,.28)}
+
+/* white content cards */
+.card,.ab-card,.pr,.chain-card,.div-card,.use,.lg-card li,.sc.sc-light,.sc.sc-main:not(.sc-dark),.apply-form,.cmp{
+  background:#fff!important;border:1px solid var(--card-line)!important;border-radius:var(--card-r)!important;box-shadow:var(--card-shadow)!important}
+/* tinted panels */
+.bz-main,.div-next,.bz-next,.lg-card,.calc2,.cta-card{background:var(--cream-2)!important;border:1px solid var(--card-line)!important;border-radius:var(--card-r)!important;box-shadow:none!important}
+.div-next,.bz-next{border-style:solid!important}
+/* dark / coloured cards: same radius, no outline */
+.ic,.ic-dark,.ic-stat,.sc,.hyb-feature,.pr-feat,.vm,.calc{border-radius:var(--card-r)!important}
+.ic-dark,.ic-stat.dark,.sc-dark,.pr-feat,.hyb-feature{border:0!important}
+.pr-feat{box-shadow:none!important}
+/* photos inside cards follow the card radius */
+.pc img,.chain-card img,.div-main img,.bz-main img,.faq-photo img,.svc-list-photo img,.swap,.hf-photo,.apply-photo,.ic-photo img{border-radius:var(--card-r)!important}
+.chain-card,.div-card,.bz-main{overflow:hidden}
+.chain-card img,.div-main img{border-radius:0!important}
+.bz-main img{border-radius:0!important}
+/* consistent padding */
+.card,.ab-card,.use{padding:26px 24px!important}
+.chain-card figcaption{padding:18px 22px 22px}
+/* consistent number badge */
+.ab-ico{width:40px!important;height:40px!important;border-radius:10px!important;background:#e8f4ee!important;font-size:.9rem;margin-bottom:34px!important}
+/* hover only on links/cards that act like links */
+.card,.ab-card,.pr,.chain-card,.div-card,.use{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.card:hover,.ab-card:hover,.pr:hover,.chain-card:hover,.div-card:hover,.use:hover{transform:translateY(-3px);border-color:rgba(31,157,87,.35)!important;box-shadow:var(--card-hover)!important}
+.use b{display:block;margin-bottom:6px}
+.use p{margin:0;color:#4b5a51;font-size:.95rem;line-height:1.5}
+/* pc caption cards */
+.pc div{border-radius:calc(var(--card-r) - 4px)!important}
+/* FAQ chevrons match */
+.faq summary::after{border-radius:8px}
+/* tags/badges consistent */
+.div-tag,.ic-tag,.tag{border-radius:8px}
+@media (max-width:900px){:root{--card-r:14px}.card,.ab-card,.use{padding:22px 20px!important}}
+.ab-card::before,.ab-card::after{display:none!important}
+.ab-card{border-top:1px solid var(--card-line)!important}
+.hyb-feature,.hyb-feature:hover{box-shadow:none!important}
+/* keep dark cards dark (override unified light rule) */
+.calc2,.pr.pr-feat{background:linear-gradient(160deg,#143222 0%,#0b1c12 100%)!important;border:0!important;box-shadow:none!important;color:#fff}
+.pr.pr-feat:hover{border:0!important;box-shadow:none!important}
