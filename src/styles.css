@@ -1172,3 +1172,28 @@ body{font-size:17px}
 .social.on-light{margin-top:16px}
 .social.on-light a{border-color:rgba(14,36,23,.14);color:#0e2417}
 .social.on-light a:hover{color:#fff}
+
+/* ===== Premium footer ===== */
+.site-footer{position:relative;background:#06130c;color:rgba(255,255,255,.62);padding:84px 0 0;overflow:hidden}
+.site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(76,196,127,.55),transparent)}
+.site-footer::after{content:"";position:absolute;right:-120px;top:-160px;width:520px;height:520px;background:radial-gradient(circle,rgba(31,157,87,.16),transparent 65%);pointer-events:none}
+.ft-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:56px;padding-bottom:64px}
+.ft-tag{margin:26px 0 0;font-family:Montserrat,sans-serif;font-weight:600;font-size:1.35rem;line-height:1.35;letter-spacing:-.01em;color:#fff}
+.ft-note{margin:14px 0 0;font-size:.9rem;color:rgba(255,255,255,.5)}
+.ft-col{display:flex;flex-direction:column;align-items:flex-start;gap:13px}
+.ft-col h4{margin:0 0 10px;font-family:Montserrat,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#4cc47f}
+.ft-col a,.ft-loc{font-size:.95rem;color:rgba(255,255,255,.72);transition:color .2s}
+.ft-col a:hover{color:#fff}
+.ft-col .social{margin-top:12px}
+.ft-bottom{position:relative;z-index:1;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:26px 0 30px;border-top:1px solid rgba(255,255,255,.09);font-size:.82rem;color:rgba(255,255,255,.42)}
+.ft-bottom p{margin:0}
+.site-footer .social a{width:42px;height:42px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.03);color:rgba(255,255,255,.85)}
+.site-footer .social a:hover{background:#1f9d57;border-color:#1f9d57;color:#fff;transform:translateY(-2px)}
+@media (max-width:900px){
+  .site-footer{padding-top:60px}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:40px 28px;padding-bottom:44px}
+  .ft-brand{grid-column:1/-1}
+}
+@media (max-width:480px){.ft-bottom{flex-direction:column;gap:6px}}
+.ft-col a,.ft-brand a{text-decoration:none}
+@media (max-width:900px){.ft-col:last-child{grid-column:1/-1}}
