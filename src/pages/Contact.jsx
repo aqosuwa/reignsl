@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 import usePageMeta from '../components/usePageMeta.js'
 import { sendForm } from '../sendForm.js'
+import Social from '../components/Social.jsx'
 
 const roles = ['Customer', 'Dealer or installer', 'Investor or partner', 'Other']
 
@@ -46,6 +47,7 @@ export default function Contact() {
             <li>Customers, dealers, installers and investors welcome</li>
           </ul>
           <p className="apply-line"><a href="mailto:info@reignsl.com">info@reignsl.com</a><br /><span>Starting in Freetown, Sierra Leone</span></p>
+          <Social className="on-light" />
         </div>
         <form className="apply-form" onSubmit={submit} noValidate>
           <div className="role-seg role-seg4" role="group" aria-label="I am a">

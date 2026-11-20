@@ -1,5 +1,6 @@
 import { asset } from '../asset.js'
 import { Link } from 'react-router-dom'
+import Social from './Social.jsx'
 
 export default function Footer() {
   return (
@@ -18,6 +19,7 @@ export default function Footer() {
           <Link to="/partner">Partner</Link>
           <Link to="/contact">Contact</Link>
         </nav>
+        <Social />
         <p className="fine">&copy; {new Date().getFullYear()} REIGN. All rights reserved.</p>
       </div>
     </footer>

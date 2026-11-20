@@ -1164,3 +1164,11 @@ body{font-size:17px}
 
 /* header: opaque so page content never smudges through */
 .site-header{background:#fff!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+
+/* social icons */
+.social{display:flex;gap:10px;align-items:center}
+.social a{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;border:1px solid rgba(255,255,255,.22);color:#fff;transition:background .2s,border-color .2s,transform .2s}
+.social a:hover{background:#1f9d57;border-color:#1f9d57;transform:translateY(-2px)}
+.social.on-light{margin-top:16px}
+.social.on-light a{border-color:rgba(14,36,23,.14);color:#0e2417}
+.social.on-light a:hover{color:#fff}
